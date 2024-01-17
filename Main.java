@@ -4,14 +4,17 @@ public class Main {
         builder.setEta(55);
         builder.setIndirizzo("Via Roma 50");
 
-        //Persona creata tramite Builder.
         Person persona1 = builder.build();
         System.out.println("Persona1: " + persona1);
 
         System.out.println("------------------------------------------------------------------------------------");
 
-        //Persona creata tramite istanza di Persona.
-        Person persona2 = new Person("Giuseppe", "Rossi",34,"Via Luce 23");
+        PersonBuilder builder2 = new PersonBuilder("Pino", "Stinnicchio");
+        builder2.setEta(44);
+        builder2.setIndirizzo("Via Disgrazia 50");
+
+        Person persona2 = builder2.build();
         System.out.println("Persona2: " + persona2);
+
     }
 }
